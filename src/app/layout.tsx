@@ -6,8 +6,8 @@ import '@fontsource/ibm-plex-sans/500.css';
 import '@fontsource/ibm-plex-sans/700.css';
 
 export const metadata: Metadata = {
-  title: "Alfredo's Timepieces | Luxury Watch Boutique",
-  description: 'Discover our curated collection of exceptional timepieces, where craftsmanship meets sophistication.',
+  title: "Alfredo's Time",
+  description: 'Discover our curated collection of exceptional timepieces.',
 }
 
 export default function RootLayout({
