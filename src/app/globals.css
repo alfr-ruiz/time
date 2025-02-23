@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+@layer base {
+  :root {
+    --border: 215 27.9% 16.8%;
+    --input: 215 27.9% 16.8%;
+    --ring: 215 27.9% 16.8%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    /* Full CSS variables added here */
+  }
+
+  .dark {
+    /* Dark mode variables */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-[color:var(--border)];
+  }
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
+  }
+}
