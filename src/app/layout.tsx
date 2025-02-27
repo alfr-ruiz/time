@@ -4,6 +4,7 @@ import '@fontsource/ibm-plex-sans/300.css';
 import '@fontsource/ibm-plex-sans/400.css';
 import '@fontsource/ibm-plex-sans/500.css';
 import '@fontsource/ibm-plex-sans/700.css';
+import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
   title: "Alfredo's Time",
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-background font-sans antialiased">
         <div className="relative flex min-h-screen flex-col">
+          <Navbar />
           {children}
         </div>
       </body>

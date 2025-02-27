@@ -1,9 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 * {
   font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #212121;
+  letter-spacing: 0.2px;
 }
 
 @layer base {
@@ -18,6 +22,22 @@
 
   .dark {
     /* Dark mode variables */
+  }
+}
+
+@layer components {
+  .premium-button {
+    @apply uppercase text-sm font-light py-3 px-6 transition-colors duration-300;
+    letter-spacing: 0.05em;
+  }
+  
+  .premium-heading {
+    @apply uppercase font-light;
+    letter-spacing: 0.05em;
+  }
+  
+  .premium-container {
+    @apply max-w-screen-xl mx-auto px-4 md:px-8;
   }
 }
 
