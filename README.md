@@ -1,8 +1,13 @@
-# Next.js + Supabase on Google Cloud Run
+# Next.js + PocketBase on Google Cloud Run
 
 ## Development Setup
 
-1. Replace Supabase credentials in `.env.local`
+1. Set up PocketBase locally:
+   - Download PocketBase from [pocketbase.io](https://pocketbase.io/docs/)
+   - Run PocketBase locally: `./pocketbase serve`
+   - Access the admin UI at `http://127.0.0.1:8090/_/`
+   - Create collections and set up your schema
+
 2. Install dependencies:
 
 ```bash

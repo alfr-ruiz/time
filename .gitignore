@@ -1,5 +1,8 @@
 # Environment
 .env*.local
+pocketbase.exe
+pocketbase
+pb_data/
 
 # Dependencies
 node_modules/

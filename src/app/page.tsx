@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { supabase } from '../lib/supabaseClient';
+import { pb } from '../lib/pocketbaseClient';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -326,14 +326,14 @@ export default function HomePage() {
                   </a>
                 </div>
               </div>
-              <div>
-                <p
-                  className="text-gray-400 text-sm font-['IBM_Plex_Sans']"
-                  style={letterSpacingStyle}
-                >
-                  2025 Alfredo&apos;s Timepieces. All rights reserved.
-                </p>
-              </div>
+            </div>
+            <div>
+              <p
+                className="text-gray-400 text-sm font-['IBM_Plex_Sans']"
+                style={letterSpacingStyle}
+              >
+                2025 Alfredo&apos;s Timepieces. All rights reserved.
+              </p>
             </div>
           </div>
         </div>
