@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Common letter spacing style
-  const letterSpacingStyle = { letterSpacing: "0.05em" };
+  const letterSpacingStyle = { letterSpacing: '0.05em' };
 
   return (
     <>
@@ -19,7 +19,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="flex items-center space-x-2 focus:outline-none uppercase text-sm font-['IBM_Plex_Sans']"
-            style={{ letterSpacing: "0.05em" }}
+            style={{ letterSpacing: '0.05em' }}
             aria-label="Toggle menu"
           >
             <svg
@@ -99,10 +99,7 @@ const Navbar = () => {
           </button>
 
           {/* Wishlist Icon */}
-          <button
-            className="focus:outline-none hidden md:block"
-            aria-label="Wishlist"
-          >
+          <button className="focus:outline-none hidden md:block" aria-label="Wishlist">
             <svg
               width="20"
               height="20"
@@ -148,7 +145,7 @@ const Navbar = () => {
         <div className="container mx-auto px-6">
           <ul
             className="flex justify-center space-x-10 py-3 text-sm font-['IBM_Plex_Sans'] uppercase"
-            style={{ letterSpacing: "0.05em" }}
+            style={{ letterSpacing: '0.05em' }}
           >
             <li>
               <Link
@@ -204,19 +201,13 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-white transform ${isMenuOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out lg:hidden`}
+        className={`fixed inset-0 z-50 bg-white transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out lg:hidden`}
       >
         <div className="flex justify-between items-center p-4 border-b">
-          <div
-            className="font-medium text-lg font-['IBM_Plex_Sans']"
-            style={letterSpacingStyle}
-          >
+          <div className="font-medium text-lg font-['IBM_Plex_Sans']" style={letterSpacingStyle}>
             Menu
           </div>
-          <button
-            onClick={() => setIsMenuOpen(false)}
-            className="p-2 focus:outline-none"
-          >
+          <button onClick={() => setIsMenuOpen(false)} className="p-2 focus:outline-none">
             <svg
               width="24"
               height="24"
@@ -235,10 +226,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className="p-4">
-          <ul
-            className="space-y-4 font-['IBM_Plex_Sans']"
-            style={letterSpacingStyle}
-          >
+          <ul className="space-y-4 font-['IBM_Plex_Sans']" style={letterSpacingStyle}>
             <li>
               <Link href="/collection" className="block px-2 py-2 border-b">
                 Collection
