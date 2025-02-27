@@ -1,9 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     container: {
       center: true,
@@ -14,12 +12,12 @@ export default {
     },
     extend: {
       letterSpacing: {
-        tighter: '-0.05em',
-        tight: '-0.025em',
-        normal: '0',
-        wide: '0.025em',
-        wider: '0.05em',
-        widest: '0.1em',
+        tighter: "-0.05em",
+        tight: "-0.025em",
+        normal: "0",
+        wide: "0.025em",
+        wider: "0.05em",
+        widest: "0.1em",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -30,7 +28,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          'red': '#B10000',
+          red: "#B10000",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -78,7 +76,5 @@ export default {
       },
     },
   },
-  plugins: [
-    "tailwindcss-animate"
-  ],
-}
+  plugins: ["tailwindcss-animate"],
+};
