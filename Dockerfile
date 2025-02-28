@@ -3,13 +3,22 @@ FROM node:18-slim
 
 WORKDIR /app
 
+# Copy package.json, configuration files and build files
 COPY package*.json ./
+COPY next.config.js ./
+COPY postcss.config.js ./
+COPY tailwind.config.js ./
+COPY tsconfig.json ./
 
-# Install dependencies
-RUN npm install
+# Copy config directory
+COPY config ./config/
+
+# Install dependencies including dev dependencies
+RUN npm install --include=dev
 
 # Copy application files
-COPY . .
+COPY src ./src
+COPY public ./public
 
 # Build the application
 RUN npm run build

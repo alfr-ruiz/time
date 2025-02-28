@@ -1,0 +1,126 @@
+{
+  "collections": [
+    {
+      "name": "users",
+      "type": "auth",
+      "system": true,
+      "schema": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "avatar",
+          "type": "file",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "time_entries",
+      "type": "base",
+      "schema": [
+        {
+          "name": "title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "start_time",
+          "type": "date",
+          "required": true
+        },
+        {
+          "name": "end_time",
+          "type": "date",
+          "required": false
+        },
+        {
+          "name": "is_running",
+          "type": "bool",
+          "required": true
+        },
+        {
+          "name": "user",
+          "type": "relation",
+          "required": true,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": false
+          }
+        },
+        {
+          "name": "project",
+          "type": "relation",
+          "required": false,
+          "options": {
+            "collectionId": "projects",
+            "cascadeDelete": false
+          }
+        },
+        {
+          "name": "tags",
+          "type": "relation",
+          "required": false,
+          "options": {
+            "collectionId": "tags",
+            "cascadeDelete": false,
+            "maxSelect": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "projects",
+      "type": "base",
+      "schema": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "color",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "owner",
+          "type": "relation",
+          "required": true,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "tags",
+      "type": "base",
+      "schema": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "color",
+          "type": "text",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

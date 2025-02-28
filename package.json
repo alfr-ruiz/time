@@ -6,11 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
-    "format": "prettier --write .",
+    "lint": "next lint --config config/.eslintrc.js",
+    "lint:fix": "next lint --fix --config config/.eslintrc.js",
+    "format": "prettier --write . --config config/.prettierrc.js",
     "fix:all": "npm run lint:fix && npm run format",
-    "check": "prettier --check . && eslint ."
+    "check": "prettier --check . --config config/.prettierrc.js && eslint . --config config/.eslintrc.js"
   },
   "dependencies": {
     "@fontsource/ibm-plex-sans": "^5.1.1",

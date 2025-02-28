@@ -1,0 +1,3 @@
+@echo off
+echo Starting PocketBase server...
+start /b ..\backend\pocketbase.exe serve
